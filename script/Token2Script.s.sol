@@ -8,15 +8,12 @@ contract Token2Script is Script {
     // Add your script logic here
     Token2 public token;
 
-    function run () external returns (Token2) {
+    function run() external returns (Token2) {
         vm.startBroadcast();
 
-       token = new Token2("NAOMI", "NAI");
+        token = new Token2("NAOMI", "NAI");
 
-       vm.stopBroadcast();
-       return token;
-
-        
+        vm.stopBroadcast();
+        return token;
     }
-   
 }
